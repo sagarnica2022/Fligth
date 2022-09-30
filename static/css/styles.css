@@ -11507,3 +11507,58 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.rounded-img{
+  border-radius: 200px;
+}
+
+.menu-lateral a:hover{
+  color: red;
+}
+
+.bg-gray{
+  background-color: #e5e5e5;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.menu-lateral{
+  height: 500px;
+}
+
+.pr{
+  padding-right: 10px;
+}
+
+.ml{
+  float: right;
+}
+.opcMenu{
+  color: #353535;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.opcMenu:hover{
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background-color: #303030;
+  color: #fff;
+}
+
+.textblack{
+  color: #000;
+}
+
+li button{
+  text-align: start;
+}
+
+.bg-green{
+  background-color: var(--bs-success);
+}
+
+
+
