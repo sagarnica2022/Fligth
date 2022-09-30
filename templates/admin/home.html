@@ -1,29 +1,58 @@
 {% extends 'layout/main.html' %}
 
-{%  block content %}
-<section class="page-section bg-primary text-white mb-0" id="admin">
-<div class="container">
-    <!-- About Section Heading-->
-    <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-    <!-- Icon Divider-->
-    <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
+{% block content %}
+<section class="page-section bg-gray p-3 mb-0" id="admin">
+    <div class="row align-content-center m-3">
+        <div id="menuLateral" class="col-2">
+            <!--datos usuario-->
+            <div class="row px-2 align-items-center">
+                <div class="col-3 p-0">
+                    <img class="img-fluid rounded-img " src="{{url_for('static', filename='img/user.jpg')}}"
+                        alt="foto de perfil">
+                </div>
+                <div class="col">
+                    <p class="text-muted m-0 text small">Administrador</p>
+                    <p>Jose Anastasio Perdomo</p>
+                </div>
+            </div>
+            <!--Menu navegacion lateral, interfaz administrador-->
+            <div class="">
+                <ul class="list-unstyled">
+                    <li class="nav-item"><a href="/administrador" class="nav-link opcMenu"><i class="fa-solid fa-house pr"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#subUsers" class="nav-link opcMenu df"
+                            data-bs-toggle="collapse"><i class="fa-solid fa-person pr"></i> Usuarios <i class="fa-sharp fa-solid fa-caret-up ml"></i></a>
+                        <ul id="subUsers" class="collapse">
+                            <li class="nav-item list-unstyled"><a href="/usuarios" class="nav-link opcMenu ">Clientes</a></li>
+                            <li class="nav-item list-unstyled"><a href="/usuarios" class="nav-link opcMenu " >Pilotos</a></li>
+                            <li class="nav-item list-unstyled"><a href="" class="nav-link opcMenu " >Permisos usuario</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#subVuelos" class="nav-link opcMenu"
+                            data-bs-toggle="collapse"><i class="fa-solid fa-plane-departure pr"></i> Vuelos <i class="fa-sharp fa-solid fa-caret-up ml"></i></a>
+                        <ul id="subVuelos" class="collapse">
+                            <li class="nav-item list-unstyled"><a href="" class="nav-link opcMenu">Ver vuelos</a>
+                            </li>
+                            <li class="nav-item list-unstyled"><a href="" class="nav-link opcMenu">Estados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="listPlane" class="nav-link opcMenu"><i class="fa-solid fa-plane-up pr"></i>Aviones</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="list-unstyled">
+                    <li class="list-unstyled"><a href="" class="nav-link opcMenu"><i class="fa-sharp fa-solid fa-gear pr"></i> Configuración</a></li>
+                    <li class="list-unstyled"><a href="" class="nav-link opcMenu"><i class="fa-solid fa-user pr"></i> Perfil</a></li>
+                    <li class="list-unstyled"><button class="nav-link opcMenu bg-gray float-left"><i class="fa-solid fa-right-from-bracket pr"></i> Salir</button></li>
+                </ul>
+            </div>
+        </div>
+        <!--Contenido-->
+        <div class="col-10 bg-white rounded-3 shadow mr-3">
+            {% block contentAdmin %}
+
+            {% endblock %}
+        </div>
     </div>
-    <!-- About Section Content-->
-    <div class="row">
-        <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-        <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-    </div>
-    <!-- About Section Button-->
-    <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-            <i class="fas fa-download me-2"></i>
-            Free Download!
-        </a>
-    </div>
-</div>
 </section>
 
 {% endblock %}

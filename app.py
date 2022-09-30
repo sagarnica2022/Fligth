@@ -6,7 +6,7 @@ def index():
 
 @app.route('/administrador')
 def admin():
-    return render_template('/admin/home.html')
+    return render_template('admin/dashboard.html')
 
 @app.route('/login')
 def login():
@@ -19,3 +19,7 @@ def vuelos():
 @app.route('/registro')
 def registro():
     return render_template('registro.html')
+
+@app.route('/usuarios')
+def listUsers():
+    return render_template('admin/users.html')
