@@ -2,11 +2,10 @@
 
 {% block content %}
 
-<!-- Contact Section-->
-<section class="page-section" id="contact">
+<section class="page-section" id="registro">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro de usuario</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -16,69 +15,66 @@
         <!-- Contact Section Form-->
         <div class="row justify-content-center">
             <div class="col-lg-8 col-xl-7">
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form action="/createUser" id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST">
                     <!-- Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                            data-sb-validations="required" />
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <input class="form-control" id="nombres" type="text" placeholder="Ingresa tu nombre"
+                            data-sb-validations="required" name="nombres" />
+                        <label for="name">Nombres</label>
+                        <div class="invalid-feedback" data-sb-feedback="nombres:required">Nombre requerido</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="apellidos" type="text" placeholder="Ingresa tu apellido"
+                            data-sb-validations="required" name="apellidos" />
+                        <label for="name">Apellidos</label>
+                        <div class="invalid-feedback" data-sb-feedback="apellidos:required">Apellido requerido</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="nacimiento" type="date" data-sb-validations="required"
+                            name="nacimiento" />
+                        <label for="name">Fecha de nacimiento</label>
+                        <div class="invalid-feedback" data-sb-feedback="nacimiento:required">Fecha nacimiento requerida
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="documento" type="number" placeholder="documento"
+                            data-sb-validations="required" name="documento" />
+                        <label for="name">Numero de documento</label>
+                        <div class="invalid-feedback" data-sb-feedback="documento:required">Numero documento requerido
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="telefono" type="number" placeholder="ej: 234324234"
+                            data-sb-validations="required" name="telefono" />
+                        <label for="name">Telefono</label>
+                        <div class="invalid-feedback" data-sb-feedback="telefono:required">Telefono requerido</div>
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                            data-sb-validations="required,email" />
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            data-sb-validations="required" name="correo" />
+                        <label for="email">Correo electronico</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">correo requerido</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Correo no valido.</div>
                     </div>
-                    <!-- Phone number input-->
+
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                            data-sb-validations="required" />
-                        <label for="phone">Phone number</label>
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                        </div>
+                        <input class="form-control" id="contraseña" type="password" placeholder="Crear contraseña"
+                            data-sb-validations="required" name="contraseña" />
+                        <label for="name">Contraseña</label>
+                        <div class="invalid-feedback" data-sb-feedback="contraseña:required">contraseña requerida</div>
                     </div>
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
-                            style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a
-                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
+
                     <div class="d-none" id="submitErrorMessage">
                         <div class="text-center text-danger mb-3">Error sending message!</div>
                     </div>
                     <!-- Submit Button-->
-                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Regristrar</button>
                 </form>
             </div>
         </div>
+
+       
     </div>
 </section>
 

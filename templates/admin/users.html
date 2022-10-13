@@ -1,7 +1,31 @@
 {% extends 'admin/home.html' %}
 
 {% block contentAdmin %}
-    
-    <p>listado de usuarios</p>
+
+<table class="table table-striped rounded">
+    <tr class="table-dark">
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Fecha nacimiento</th>
+        <th>Telefono </th>
+        <th>Correo</th>
+        <th>acciones</th>
+    </tr>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.nombres + " " + user.apellidos}}</td>
+            <td>{{ user.documento }}</td>
+            <td>{{ user.nacimiento }}</td>
+            <td>{{ user.telefono }}</td>
+            <td>{{ user.correo }}</td>
+            <td>
+                <a href="delete/{{user.id}}" class="mx-2 text-danger"><i class="fa-solid fa-square-minus"></i></a>
+                <a href="" class="mx-2 text-success" ><i class="fa-solid fa-pen-to-square"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}

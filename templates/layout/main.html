@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Fligth app</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/flight.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/logo.ico')}}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -22,9 +22,10 @@
 
 <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-light text-uppercase" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="/vuelos">Start Fligth.</a>
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo" class="navbar-brand" width="45">
+            <a class="navbar-brand text-capitalize" href="/">Start Fligth.</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -33,15 +34,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
 
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="/administrador">Administrador</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="/vuelos">Vuelos</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                <ul class="navbar-nav ms-auto text-capitalize">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3"
+                            href="/">Vuelos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3"
                             href="/registro">Registro</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3"
                             href="/login">Login</a></li>
                 </ul>
             </div>
@@ -61,42 +59,37 @@
             <div class="row">
                 <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
-                    <p class="lead mb-0">
-                        2215 John Daniel Drive
-                        <br />
-                        Clark, MO 65243
+                    <h5 class="text-uppercase mb-4">Ubicación</h5>
+                    <p class=" mb-0">
+                        Aeropuerto Rafael Núñez International
                     </p>
                 </div>
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                    <h5 class="text-uppercase mb-4">redes sociales.</h5>
+                    <a class="btn btn-social mx-1" href="#!"><i
                             class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
                 </div>
                 <!-- Footer About Text-->
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                    <p class="lead mb-0">
-                        Freelance is a free to use, MIT licensed Bootstrap theme created by
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                        .
+                    <h5 class="text-uppercase mb-4">Start fligth</h5>
+                    <p class="mb-0">
+                        Realiza tus reservas de forma segura y rapido a travez del nuestro sitio web oficial
                     </p>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+    <div class="copyright py-4 text-center">
+        <div class="container"><small>Copyright &copy; START FLIGTH 2022 - Aeropuerto Rafael Núñez International - todos los derechos reservados</small></div>
     </div>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <!-- Core theme JS-->
     <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
     <script src="{{url_for('static', filename='js/Validacion.js')}}"></script>
@@ -105,6 +98,7 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </body>
 
 </html>
